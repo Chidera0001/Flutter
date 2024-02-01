@@ -75,6 +75,7 @@ flutter:
     - images/sell.png
     - images/trans_loading.png
     - images/transaction background.png
+    - images/logo2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
