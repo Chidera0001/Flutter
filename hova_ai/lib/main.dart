@@ -1,19 +1,26 @@
+import 'package:codia_demo_flutter/comfirmtranction.dart';
 import 'package:codia_demo_flutter/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyApp extends StatelessWidget {
+
+void main () {
+  runApp(const Hova());
+}
+class Hova extends StatelessWidget {
+  const Hova({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812), // The design size
+      designSize: const Size(375, 812), // The design size
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
           home:
-              HomePage(), // Assuming HomePage is a widget you want to navigate to
+              ComfirmTransaction(), // Assuming HomePage is a widget you want to navigate to
         );
       },
     );

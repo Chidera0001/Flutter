@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ItemContainer extends StatelessWidget {
   final String title;
@@ -17,30 +18,68 @@ class ItemContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+        margin: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            width: 2,
+            color: Colors.grey.shade300,
+          ),
+        ),
         child: Column(
           children: [
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: color,
-                child: Text(text),
-              ),
-              title: Text(text),
-              trailing: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  color: Color(0xff581845),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: color,
+                    child: CircleAvatar(
+                      radius: 23,
+                      backgroundColor: Colors.white,
+                      child: Center(
+                        child: Text(
+                          text,
+                          style: TextStyle(color: color),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-                child: Icon(Icons.more_horiz),
-              ),
+                const SizedBox(width: 15),
+                Text(title),
+                const Spacer(),
+                Container(
+                  margin: const EdgeInsets.all(5),
+                  height: 45.h,
+                  width: 45.w,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2,
+                      color: const Color(0xff581845),
+                    ),
+                    borderRadius: BorderRadius.circular(13),
+                  ),
+                  child: const Icon(Icons.more_horiz),
+                ),
+              ]),
             ),
-            Divider(color: Color(0xffCCCCCC)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Text(text, style: TextStyle(color: Colors.black)),
-                widget
-              ],
+            const Divider(color: Color(0xffCCCCCC)),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(price,
+                      style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20)),
+                  widget
+                ],
+              ),
             ),
           ],
         ));
