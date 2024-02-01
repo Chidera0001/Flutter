@@ -17,7 +17,8 @@ class _MyApiIntegrationWidgetState extends State<MyApiIntegrationWidget> {
   }
 
   Future<void> fetchDataFromApi() async {
-    final response = await http.get('');
+    final response = await http
+        .get('https://65b5972f41db5efd2867c918.mockapi.io/api/cd/User' as Uri);
 
     if (response.statusCode == 200) {
       setState(() {
