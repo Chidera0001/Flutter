@@ -1,12 +1,11 @@
-import 'package:codia_demo_flutter/comfirmtranction.dart';
 import 'package:codia_demo_flutter/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-void main () {
+void main() {
   runApp(const Hova());
 }
+
 class Hova extends StatelessWidget {
   const Hova({super.key});
 
@@ -20,7 +19,7 @@ class Hova extends StatelessWidget {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
           home:
-              ComfirmTransaction(), // Assuming HomePage is a widget you want to navigate to
+              HomePage(), // Assuming HomePage is a widget you want to navigate to
         );
       },
     );
