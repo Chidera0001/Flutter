@@ -1,0 +1,12 @@
+com.example.codia_demo_flutter.app-jetified-window-1.0.0-beta04-0 C:\Users\ADMIN\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\res
+com.example.codia_demo_flutter.app-jetified-annotation-experimental-1.1.0-1 C:\Users\ADMIN\.gradle\caches\transforms-3\6c0c163cc77ae6c91f9f7dfcd179c29c\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.codia_demo_flutter.app-core-1.6.0-2 C:\Users\ADMIN\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\res
+com.example.codia_demo_flutter.app-jetified-window-java-1.0.0-beta04-3 C:\Users\ADMIN\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.codia_demo_flutter.app-pngs-4 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\generated\res\pngs\release
+com.example.codia_demo_flutter.app-resValues-5 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\generated\res\resValues\release
+com.example.codia_demo_flutter.app-rs-6 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\generated\res\rs\release
+com.example.codia_demo_flutter.app-mergeReleaseResources-7 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.codia_demo_flutter.app-mergeReleaseResources-8 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.codia_demo_flutter.app-merged_res-9 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\build\intermediates\merged_res\release
+com.example.codia_demo_flutter.app-main-10 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\src\main\res
+com.example.codia_demo_flutter.app-release-11 C:\Users\ADMIN\OneDrive\Desktop\Flutter\hova_ai\android\app\src\release\res

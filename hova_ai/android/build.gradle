@@ -19,13 +19,40 @@ allprojects {
 }
 
 rootProject.buildDir = '../build'
-subprojects {
-    project.buildDir = "${rootProject.buildDir}/${project.name}"
-}
-subprojects {
-    project.evaluationDependsOn(':app')
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 34 // Replace with the version installed on your machine
+    namespace 'com.example.hova_ai'
+
+    defaultConfig {
+        applicationId "com.Dera.myapp"
+        minSdkVersion 16 // Replace with the minimum SDK version your app supports
+        targetSdkVersion 34 // Replace with the target SDK version
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+    release {
+        storeFile file('C:\\Users\\ADMIN\\OneDrive\\Desktop\\Flutter\\hova_ai\\android\\flutter\\hova_ai\\Dera.jks')
+        storePassword '123456'
+        keyAlias 'Dera'
+        keyPassword '123456'
+    }
 }
 
-tasks.register("clean", Delete) {
-    delete rootProject.buildDir
+    buildTypes {
+    release {
+        signingConfig signingConfigs.release
+        minifyEnabled false
+        shrinkResources false
+        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {
+        signingConfig signingConfigs.debug
+    }
+}
 }
