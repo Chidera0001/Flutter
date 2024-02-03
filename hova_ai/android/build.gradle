@@ -37,7 +37,7 @@ android {
 
     signingConfigs {
     release {
-        storeFile file('C:\\Users\\ADMIN\\OneDrive\\Desktop\\Flutter\\hova_ai\\android\\flutter\\hova_ai\\Dera.jks')
+        storeFile file('keys/Dera.jks')
         storePassword '123456'
         keyAlias 'Dera'
         keyPassword '123456'
@@ -55,4 +55,10 @@ android {
         signingConfig signingConfigs.debug
     }
 }
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            // Remove the following line
+            // variant.assemble.dependsOn "assembleRelease"
+        }
+    }
 }
