@@ -22,6 +22,11 @@ rootProject.buildDir = '../build'
 
 apply plugin: 'com.android.application'
 
+  def keystoreProperties = new Properties()
+   def keystorePropertiesFile = rootProject.file('key.properties')
+   if (keystorePropertiesFile.exists()) {
+       keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+   }
 android {
     compileSdkVersion 34 
     namespace 'com.example.hova_ai'
@@ -37,28 +42,16 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('keys/Dera.jks')
-            storePassword '000000' 
-            keyAlias 'Dera'
-            keyPassword '000000' 
-        }
-        debug {
-            storeFile file('keys/Dera.jks')
-            storePassword '000000' 
-            keyAlias 'Dera'
-            keyPassword '000000' 
-        }
+            keyAlias keystoreProperties['Dera']
+            keyPassword keystoreProperties['000000']
+            storeFile keystoreProperties['keys/Dera.jks'] ?: null
+            storePassword keystoreProperties['000000']
+            }
     }
-
+    
     buildTypes {
-        release {
-            signingConfig signingConfigs.release
-            minifyEnabled false
-            shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-        debug {
-            signingConfig signingConfigs.debug
-        }
-    }
+       release {
+           signingConfig signingConfigs.release
+       }
+   }
 }
