@@ -6,7 +6,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:7.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -25,7 +25,11 @@ apply plugin: 'com.android.application'
   def keystoreProperties = new Properties()
    def keystorePropertiesFile = rootProject.file('key.properties')
    if (keystorePropertiesFile.exists()) {
+       println "keystorePropertiesFile exists"
        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+       println "keystoreProperties loaded"
+   } else {
+       println "keystorePropertiesFile does not exist"
    }
 android {
     compileSdkVersion 34 
